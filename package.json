@@ -1,0 +1,14 @@
+{
+  "name": "passgen",
+  "version": "1.0.0",
+  "description": "Secure password generator with C backend and Node.js API",
+  "main": "server.js",
+  "scripts": {
+    "build": "node -e \"require('fs').mkdirSync('bin',{recursive:true})\" && gcc -O2 -o bin/passgen src/passgen.c",
+    "start": "node server.js",
+    "dev": "npm run build && node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
